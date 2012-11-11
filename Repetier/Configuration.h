@@ -31,7 +31,8 @@
 // Gen6 1.4.1 an dlater = 71
 // Teensylu (at90usb) = 8 // requires Teensyduino
 // Printrboard (at90usb) = 9 // requires Teensyduino
-#define MOTHERBOARD 71
+#define MOTHERBOARD 62
+
 #include <avr/io.h>
 #include "pins.h"
 
@@ -848,9 +849,9 @@ IMPORTANT: With mode <>0 some changes in configuration.h are not set any more, a
 */
 #define EEPROM_MODE 1
 /** Comment out (using // at the start of the line) to disable SD support: */
-//#define SDSUPPORT 0
+#define SDSUPPORT 0
 /** Show extended directory including file length. Don't use this with pronterface! */
-#define SD_EXTENDED_DIR
+//#define SD_EXTENDED_DIR
 
 // ##########################################################################################
 // ##                                  Debug configuration                                 ##
@@ -860,7 +861,7 @@ IMPORTANT: With mode <>0 some changes in configuration.h are not set any more, a
 //#define DEBUG_QUEUE_MOVE
 /** Allows M111 to set bit 5 (16) which disables all commands except M111. This can be used
 to test your data througput or search for communication problems. */
-#define INCLUDE_DEBUG_COMMUNICATION
+//#define INCLUDE_DEBUG_COMMUNICATION
 /** Allows M111 so set bit 6 (32) which disables moves, at the first tried step. In combination
 with a dry run, you can test the speed of path computations, which are still performed. */
 //#define INCLUDE_DEBUG_NO_MOVE

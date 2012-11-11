@@ -33,7 +33,8 @@
 # $Id$
 
 TARGET = $(notdir $(CURDIR))
-INSTALL_DIR = D:/arduino/arduino-0022
+#INSTALL_DIR = /Applications/Arduino.app/Contents/Resources/Java
+INSTALL_DIR = /Applications/arduino_023/Contents/Resources/Java
 UPLOAD_RATE = 38400
 AVRDUDE_PROGRAMMER = stk500v1
 PORT = COM10
@@ -41,7 +42,7 @@ PORT = COM10
 #For "old" Arduino Mega
 #MCU = atmega1280
 #For Sanguinololu
-MCU = atmega644p 
+MCU = atmega1284p 
 F_CPU = 16000000
 
 
@@ -49,14 +50,14 @@ F_CPU = 16000000
 # Below here nothing should be changed...
 
 ARDUINO = $(INSTALL_DIR)/hardware/arduino/cores/arduino
-#AVR_TOOLS_PATH = /usr/bin
-AVR_TOOLS_PATH = d:/WinAVR/bin
+AVR_TOOLS_PATH = /usr/local/CrossPack-AVR/bin/
+#AVR_TOOLS_PATH = d:/WinAVR/bin
 SRC =  $(ARDUINO)/pins_arduino.c $(ARDUINO)/wiring.c \
 $(ARDUINO)/wiring_analog.c $(ARDUINO)/wiring_digital.c \
 $(ARDUINO)/wiring_pulse.c \
 $(ARDUINO)/wiring_shift.c $(ARDUINO)/WInterrupts.c
 CXXSRC = $(ARDUINO)/HardwareSerial.cpp $(ARDUINO)/WMath.cpp \
-$(ARDUINO)/Print.cpp ./SdFile.cpp ./SdVolume.cpp ./Sd2Card.cpp ./gcode.cpp \
+$(ARDUINO)/WString.cpp $(ARDUINO)/Print.cpp ./SdFile.cpp ./SdVolume.cpp ./Sd2Card.cpp ./gcode.cpp \
 ./Eeprom.cpp ./Extruder.cpp ./Commands.cpp
 FORMAT = ihex
 
