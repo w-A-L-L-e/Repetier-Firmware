@@ -1,3 +1,12 @@
+
+THIS IS A FORK TO COMPILE ON Mac OS X using Crosspack AVR and flashing the firmware directly
+using an UsbTinyISP to an atmega 1284p.
+I added a make_flash to do the flashing. Tweaked the makefile some and will also tweak configuration.h
+so it works for my reprap + sanguinulolu 1.3a setup...
+Will also setup configuration.h to work with my type of prusa mendel that has sanguinulolu 1.3a, nema17's, 2wire endstops +
+standard wade extruder with hobbed bolt (m8).
+
+
 Repetier-Firmware - the fast and user friendly firmware
 by repetier  (repetierdev@googlemail.com)
 
